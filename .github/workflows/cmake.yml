@@ -31,12 +31,12 @@ jobs:
         dir: "${{github.workspace}}/qt"
         install-deps: "true"
         
-    - name: Set Qt path and refresh
-      run: |
-        echo "${{github.workspace}}/qt/Qt/${{ env.QT_VERSION }}/${{ env.MINGW_PATH }}/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-        refreshenv
-        #Write-Output (Get-Command g++.exe).Path
-        #g++.exe --version
+#     - name: Set Qt path and refresh
+#       run: |
+#         echo "${{github.workspace}}/qt/Qt/${{ env.QT_VERSION }}/${{ env.MINGW_PATH }}/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+#         refreshenv
+#         #Write-Output (Get-Command g++.exe).Path
+#         #g++.exe --version
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
